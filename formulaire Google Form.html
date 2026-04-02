@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Printemps des Poètes 2026 – Vote</title>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Crimson Text', Georgia, serif;
+    background-color: #fefbf3;
+    color: #333;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  
+  /* ========== PAGE D'ACCUEIL ========== */
+  #welcomePage {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .welcome-header {
+    background: linear-gradient(135deg, #ffd6a5 0%, #ffecd2 100%);
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .welcome-header h1 {
+    font-size: 2.2em;
+    color: #6b4226;
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+  
+  .welcome-header h2 {
+    font-size: 1.2em;
+    color: #8b5a3c;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .project-info {
+    background-color: #fff3e0;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ffd6a5;
+  }
+  
+  .project-info p {
+    color: #6b4226;
+    font-size: 1em;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .project-info strong {
+    color: #ff9000;
+  }
+  
+  /* BANNIÈRE TIRAGE */
+  .lottery-banner {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+  }
+  
+  .lottery-banner h3 {
+    font-size: 1.4em;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  
+  .lottery-banner p {
+    font-size: 0.95em;
+    opacity: 0.95;
+  }
+  
+  .lottery-banner .big {
+    font-size: 1.6em;
+    font-weight: 700;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  .lottery-banner .bonus {
+    font-size: 0.9em;
+    margin-top: 8px;
+    background: rgba(255,255,255,0.2);
+    padding: 8px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+  
+  .ponge-section {
+    background: linear-gradient(135deg, #fff8e7 0%, #fefbf3 100%);
+    padding: 25px 20px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .ponge-container {
+    max-width: 700px;
+    text-align: center;
+  }
+  
+  .ponge-portrait {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #ffb347 0%, #ff9000 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    margin: 0 auto 20px;
+  }
+  
+  .ponge-container h3 {
+    color: #6b4226;
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .ponge-container p {
+    color: #4a2c18;
+    line-height: 1.8;
+    font-size: 1.05em;
+    margin-bottom: 12px;
+  }
+  
+  .ponge-container .highlight {
+    background-color: rgba(255,179,71,0.2);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  
+  .ponge-container em {
+    font-style: italic;
+  }
+  
+  /* REMERCIEMENTS */
+  .thanks-section {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    padding: 25px 20px;
+    text-align: center;
+    border-top: 3px solid #4caf50;
+  }
+  
+  .thanks-section h4 {
+    color: #2e7d32;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .thanks-section p {
+    color: #388e3c;
+    font-size: 0.95em;
+    font-style: italic;
+  }
+  
+  .thanks-section .classes {
+    font-weight: 700;
+    color: #1b5e20;
+  }
+  
+  /* Formulaire */
+  .identification-form {
+    background-color: #fff8e1;
+    padding: 25px 20px;
+  }
+  
+  .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .form-container h4 {
+    color: #6b4226;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    color: #6b4226;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 0.95em;
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.05em;
+    border: 2px solid #ffb347;
+    border-radius: 8px;
+    background-color: white;
+    color: #4a2c18;
+    font-family: 'Crimson Text', Georgia, serif;
+  }
+  
+  .submit-identification {
+    width: 100%;
+    background: linear-gradient(135deg, #ffb347 0%, #ff9000 100%);
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Crimson Text', Georgia, serif;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .submit-identification:hover {
+    transform: translateY(-2px);
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-top: 10px;
+    display: none;
+    text-align: center;
+  }
+  
+  /* ========== PAGE DE VOTE ========== */
+  #votingPage {
+    display: none;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  .vote-header {
+    background: linear-gradient(135deg, #ffd6a5 0%, #ffecd2 100%);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .vote-header h1 {
+    font-size: 1.3em;
+    color: #6b4226;
+    font-weight: 600;
+  }
+  
+  .user-badge {
+    background-color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    color: #6b4226;
+    font-weight: 600;
+  }
+  
+  .instructions {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff3e0;
+    color: #6b4226;
+    font-size: 0.9em;
+  }
+  
+  /* DEVINETTE SECTION */
+  .devinette-section {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 2px solid #2196f3;
+  }
+  
+  .devinette-section h4 {
+    color: #1565c0;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .devinette-section p {
+    color: #1976d2;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+  }
+  
+  .devinette-counter {
+    display: inline-block;
+    background: #2196f3;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.95em;
+  }
+  
+  /* Carousel */
+  .carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 10px auto;
+    padding: 0 50px;
+    flex: 1;
+  }
+  
+  .carousel-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #ffb347 #fff3e0;
+    padding: 10px 0;
+  }
+  
+  .carousel {
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+  }
+  
+  .poeme-card {
+    flex: 0 0 calc(50% - 8px);
+    min-width: 300px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    min-height: 480px;
+    border: 2px solid #ffd6a5;
+  }
+  
+  .poeme-card.guessed {
+    border-color: #4caf50;
+    box-shadow: 0 4px 15px rgba(76,175,80,0.3);
+  }
+  
+  .poeme-number {
+    display: inline-block;
+    background-color: #ffb347;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    font-weight: 700;
+    font-size: 1em;
+    margin-bottom: 10px;
+    align-self: center;
+  }
+  
+  .poeme-card h3 {
+    color: #6b4226;
+    font-size: 1.2em;
+    margin-bottom: 6px;
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .poeme-card .auteur {
+    text-align: center;
+    color: #8b5a3c;
+    font-size: 0.85em;
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+  
+  .poeme-texte {
+    flex-grow: 1;
+    line-height: 1.8;
+    font-size: 0.95em;
+    color: #4a2c18;
+    text-align: center;
+    padding: 12px;
+    background-color: #fff8e7;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-style: italic;
+  }
+  
+  /* DEVINETTE INPUT */
+  .devinette-input {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .devinette-input label {
+    display: block;
+    font-size: 0.85em;
+    color: #666;
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  
+  .devinette-input input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-family: 'Crimson Text', Georgia, serif;
+    font-size: 1em;
+    text-align: center;
+  }
+  
+  .devinette-input input:focus {
+    outline: none;
+    border-color: #ffb347;
+  }
+  
+  .devinette-input input.correct {
+    border-color: #4caf50;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+  }
+  
+  .devinette-input input.wrong {
+    border-color: #f44336;
+    background-color: #ffebee;
+  }
+  
+  .devinette-btn {
+    width: 100%;
+    background: #2196f3;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Crimson Text', Georgia, serif;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-top: 5px;
+    transition: background 0.2s;
+  }
+  
+  .devinette-btn:hover {
+    background: #1976d2;
+  }
+  
+  .devinette-result {
+    font-size: 0.85em;
+    margin-top: 5px;
+    font-weight: 600;
+  }
+  
+  .devinette-result.success {
+    color: #4caf50;
+  }
+  
+  .devinette-result.error {
+    color: #f44336;
+  }
+  
+  /* ÉTOILES */
+  .stars-section {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff3e0;
+    border-radius: 10px;
+  }
+  
+  .stars-section label {
+    display: block;
+    font-weight: 600;
+    color: #6b4226;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+  }
+  
+  .stars {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 2.2em;
+  }
+  
+  .star {
+    cursor: pointer;
+    color: #ddd;
+    transition: all 0.2s ease;
+    user-select: none;
+  }
+  
+  .star:hover,
+  .star.active {
+    color: #ffb347;
+    transform: scale(1.2);
+  }
+  
+  .star.selected {
+    color: #ff9000;
+    text-shadow: 0 0 10px rgba(255,144,0,0.5);
+  }
+  
+  /* Navigation */
+  .nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ffb347;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+  }
+  
+  .nav-arrow:hover {
+    transform: translateY(-50%) scale(1.1);
+  }
+  
+  .nav-arrow.prev { left: 5px; }
+  .nav-arrow.next { right: 5px; }
+  
+  /* Submit */
+  .submit-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff8e1;
+  }
+  
+  .submit-btn {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+    color: white;
+    border: none;
+    padding: 16px 45px;
+    font-size: 1.15em;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Crimson Text', Georgia, serif;
+    font-weight: 600;
+    animation: pulse 2s infinite;
+  }
+  
+  .submit-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    animation: none;
+  }
+  
+  .progress-indicator {
+    margin-top: 10px;
+    color: #8b5a3c;
+    font-size: 0.9em;
+  }
+  
+  .bonus-indicator {
+    margin-top: 8px;
+    padding: 12px;
+    background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+    color: white;
+    border-radius: 10px;
+    font-size: 0.95em;
+    font-weight: 600;
+    display: none;
+  }
+  
+  .bonus-indicator.visible {
+    display: block;
+    animation: pulse 1s infinite;
+  }
+  
+  .warning-text {
+    color: #e74c3c;
+    font-size: 0.85em;
+    margin-top: 8px;
+  }
+  
+  /* ========== PAGE ROULETTE ========== */
+  #roulettePage {
+    display: none;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .roulette-container {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+    max-width: 450px;
+    width: 100%;
+  }
+  
+  .roulette-container h2 {
+    color: #6b4226;
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    font-weight: 700;
+  }
+  
+  .roulette-container > p {
+    color: #8b5a3c;
+    margin-bottom: 20px;
+    font-size: 1em;
+  }
+  
+  .bonus-info {
+    background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 0.95em;
+    font-weight: 600;
+  }
+  
+  .bonus-info.no-bonus {
+    background: #f5f5f5;
+    color: #666;
+    font-weight: 400;
+  }
+  
+  /* ROULETTE ANIMATION */
+  .roulette-wheel {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 30px;
+    position: relative;
+  }
+  
+  .wheel {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+      #ff6b6b 0deg 18deg,
+      #ffd93d 18deg 36deg,
+      #6bcf7f 36deg 54deg,
+      #4d96ff 54deg 72deg,
+      #ff6b6b 72deg 90deg,
+      #ffd93d 90deg 108deg,
+      #6bcf7f 108deg 126deg,
+      #4d96ff 126deg 144deg,
+      #ff6b6b 144deg 162deg,
+      #ffd93d 162deg 180deg,
+      #6bcf7f 180deg 198deg,
+      #4d96ff 198deg 216deg,
+      #ff6b6b 216deg 234deg,
+      #ffd93d 234deg 252deg,
+      #6bcf7f 252deg 270deg,
+      #4d96ff 270deg 288deg,
+      #ff6b6b 288deg 306deg,
+      #ffd93d 306deg 324deg,
+      #6bcf7f 324deg 342deg,
+      #4d96ff 342deg 360deg
+    );
+    position: relative;
+    animation: none;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  }
+  
+  .wheel.spinning {
+    animation: spin 3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(1800deg); }
+  }
+  
+  .wheel-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 10;
+  }
+  
+  .pointer {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid #333;
+    z-index: 20;
+  }
+  
+  .roulette-btn {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+    color: white;
+    border: none;
+    padding: 16px 45px;
+    font-size: 1.25em;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: 'Crimson Text', Georgia, serif;
+    font-weight: 600;
+    transition: transform 0.3s;
+  }
+  
+  .roulette-btn:hover:not(:disabled) {
+    transform: scale(1.05);
+  }
+  
+  .roulette-btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+  }
+  
+  /* RÉSULTAT */
+  .result-box {
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 15px;
+    display: none;
+  }
+  
+  .result-box.winner {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    display: block;
+    animation: winnerPulse 1s ease;
+  }
+  
+  .result-box.loser {
+    background: #f5f5f5;
+    color: #666;
+    display: block;
+  }
+  
+  @keyframes winnerPulse {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); opacity: 1; }
+  }
+  
+  .result-box h3 {
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  
+  .result-box p {
+    font-size: 1.05em;
+    line-height: 1.6;
+  }
+  
+  /* BOUTON QUITTER */
+  .quit-btn {
+    margin-top: 25px;
+    background: #6b4226;
+    color: white;
+    border: none;
+    padding: 14px 35px;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    font-family: 'Crimson Text', Georgia, serif;
+    font-weight: 600;
+    display: none;
+    transition: background 0.2s;
+  }
+  
+  .quit-btn.visible {
+    display: inline-block;
+  }
+  
+  .quit-btn:hover {
+    background: #8b5a3c;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 15px;
+    color: #8b5a3c;
+    font-size: 0.85em;
+    background-color: #fefbf3;
+    line-height: 1.7;
+  }
+  
+  .footer-info .school {
+    font-weight: 700;
+    color: #6b4226;
+    font-size: 1.1em;
+  }
+  
+  /* Messages */
+  .message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 25px 40px;
+    border-radius: 15px;
+    font-size: 1.1em;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    display: none;
+    z-index: 1000;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .message.error {
+    background: #f44336;
+    color: white;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 999;
+  }
+  
+  /* Anti-triche overlay */
+  .anti-cheat-warning {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10000;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .anti-cheat-warning.visible {
+    display: flex;
+  }
+  
+  .anti-cheat-warning h2 {
+    color: #ff6b6b;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .anti-cheat-warning p {
+    font-size: 1.2em;
+    max-width: 500px;
+    line-height: 1.6;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .lottery-banner h3 {
+      font-size: 1.2em;
+    }
+    
+    .roulette-wheel {
+      width: 150px;
+      height: 150px;
+    }
+    
+    .wheel-center {
+      width: 45px;
+      height: 45px;
+      font-size: 1.2em;
+    }
+    
+    .poeme-card {
+      flex: 0 0 85%;
+      min-width: 280px;
+      min-height: 520px;
+    }
+    
+    .stars {
+      font-size: 2em;
+    }
+    
+    .thanks-section {
+      padding: 20px 15px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Anti-triche warning -->
+<div class="anti-cheat-warning" id="antiCheatWarning">
+  <h2>⚠️ Activité suspecte détectée</h2>
+  <p>Tu as tenté de tricher ou de recharger la page pour voter plusieurs fois.<br>
+  Ton vote a été enregistré et soumis. Tu ne peux plus participer.</p>
+</div>
+
+<!-- ========== PAGE D'ACCUEIL ========== -->
+<div id="welcomePage">
+  <div class="welcome-header">
+    <h1>🌸 Printemps des Poètes 2026 🌸</h1>
+    <h2>À la manière de Francis Ponge</h2>
+  </div>
+  
+  <div class="project-info">
+    <p>
+      Ce concours est organisé par le <strong>Centre de Documentation et d'Information</strong>, 
+      et la discipline <strong>Lettres (français)</strong>, pour mettre à l'honneur la créativité de nos élèves. 
+      Ensemble, nous célébrons la poésie qui sublime les objets du quotidien, à la manière de Francis Ponge.
+    </p>
+  </div>
+  
+  <!-- BANNIÈRE TIRAGE -->
+  <div class="lottery-banner">
+    <h3>🎰 Tirage au sort à la fin !</h3>
+    <p>
+      En participant, tu tentes ta chance pour gagner une récompense.<br>
+      <span class="big">1 GAGNANT SUR 20</span>
+    </p>
+    <p class="bonus">
+      💡 Bonus : Devine le nom des objets pour chaque poème, pour <strong>doubler</strong> tes chances !
+    </p>
+  </div>
+  
+  <div class="ponge-section">
+    <div class="ponge-container">
+      <div class="ponge-portrait">✍️</div>
+      <h3>Francis Ponge (1899-1988)</h3>
+      <p>
+        Auteur du célèbre recueil <span class="highlight">« Le Parti pris des choses »</span>, 
+        Ponge cherche à <strong>rendre justice aux objets du quotidien</strong> — 
+        la pierre, le pain, la cigarette —, en leur donnant une voix poétique unique.
+      </p>
+      <p>
+        <em>« L'objet est le meilleur modèle pour un art d'écriture. »</em>
+      </p>
+    </div>
+  </div>
+  
+  <!-- REMERCIEMENTS ÉLÈVES -->
+  <div class="thanks-section">
+    <h4>🙏 Un grand merci à nos élèves</h4>
+    <p>
+      Pour leur créativité et leur engagement dans ce projet :<br>
+      <span class="classes">TTBA • TTBE • TICER • TASSP</span>
+    </p>
+  </div>
+  
+  <div class="identification-form">
+    <div class="form-container">
+      <h4>📝 Qui es-tu ?</h4>
+      
+      <div class="form-group">
+        <label for="userNom">Nom</label>
+        <input type="text" id="userNom" placeholder="Ton nom" autocomplete="off">
+      </div>
+      
+      <div class="form-group">
+        <label for="userPrenom">Prénom</label>
+        <input type="text" id="userPrenom" placeholder="Ton prénom" autocomplete="off">
+      </div>
+      
+      <div class="form-group">
+        <label for="userRole">Tu es</label>
+        <select id="userRole">
+          <option value="">-- Choisis --</option>
+          <option value="eleve">🎒 Élève</option>
+          <option value="parent">👨‍👩‍👧 Parent</option>
+          <option value="professeur">📚 Professeur</option>
+          <option value="personnel">🏫 Personnel</option>
+        </select>
+      </div>
+      
+      <button class="submit-identification" onclick="enterVoting()">
+        Voir les poèmes →
+      </button>
+      
+      <div class="error-message" id="errorMsg">
+        Remplis tous les champs !
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== PAGE DE VOTE ========== -->
+<div id="votingPage">
+  <div class="vote-header">
+    <h1>⭐ Note tous les poèmes pour jouer</h1>
+    <div class="user-badge" id="userBadge">Invité</div>
+  </div>
+  
+  <div class="instructions">
+    👆 Fais défiler de gauche à droite, et clique sur les étoiles pour noter (1 à 5).<br>
+    <em>Les poèmes sont anonymes.</em>
+  </div>
+  
+  <!-- SECTION DEVINETTES -->
+  <div class="devinette-section">
+    <h4>🎯 Devine le nom des objets pour chaque poème !</h4>
+    <p>1 bonne réponse = chances doublées à la roulette !</p>
+    <div class="devinette-counter" id="devinetteCounter">0 / 11 devinettes correctes</div>
+  </div>
+
+  <div class="carousel-container">
+    <button class="nav-arrow prev" onclick="scrollCarousel(-1)">‹</button>
+    
+    <div class="carousel-wrapper" id="carouselWrapper">
+      <div class="carousel" id="carousel">
+        
+        <!-- Poème 1 : La Porte -->
+        <div class="poeme-card" data-id="1" data-answer="porte">
+          <span class="poeme-number">1</span>
+          <h3>???</h3>
+          <p class="auteur">Par un élève anonyme</p>
+          <div class="poeme-texte">
+            La liberté, à son seuil,<br>
+            Le son, devenant silencieux au claquement de l'acier,<br>
+            Nous laissant, prisonnier de ce monde,<br>
+            De cette barrière infranchissable, notre liberté nous prie de revenir,<br>
+            Mais la fuite devra attendre, l'alignement des aiguilles,<br>
+            Ayant un œil sur cette prison dorée, pendant notre voyage dans le ciel étoilé.
+          </div>
+          <div class="devinette-input">
+            <label>Devine l'objet :</label>
+            <input type="text" id="devinette1" placeholder="Ex: table, chaise..." autocomplete="off">
+            <button class="devinette-btn" onclick="checkAnswer(1, 'porte')">Vérifier</button>
+            <div class="devinette-result" id="result1"></div>
+          </div>
+          <div class="stars-section">
+            <label>Ton avis :</label>
+            <div class="stars" data-poem="1">
+              <span class="star" onclick="rate(1, 1)">★</span>
+              <span class="star" onclick="rate(1, 2)">★</span>
+              <span class="star" onclick="rate(1, 3)">★</span>
+              <span class="star" onclick="rate(1, 4)">★</span>
+              <span class="star" onclick="rate(1, 5)">★</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poème 2 : La Fleur -->
+        <div class="poeme-card" data-id="2" data-answer="fleur">
+          <span class="poeme-number">2</span>
+          <h3>???</h3>
+          <p class="auteur">Par un élève anonyme</p>
+          <div class="poeme-texte">
+            Habité par la vie, offre un abri,<br>
+            Au milieu de ses semblables, comme des grains de sable,<br>
+            S'ancre, comme une encre,<br>
+            Vent, emportant ce parfum envoûtant,<br>
+            L'odeur, ouvre le cœur,<br>
+            Nous permet de respirer, même parfois déshabiller,<br>
+            Quelques touches de pervenche, tranchent.
+          </div>
+          <div class="devinette-input">
+            <label>Devine l'objet :</label>
+            <input type="text" id="devinette2" placeholder="Ex: table, chaise..." autocomplete="off">
+            <button class="devinette-btn" onclick="checkAnswer(2, 'fleur')">Vérifier</button>
+            <div class="devinette-result" id="result2"></div>
+          </div>
+          <div class="stars-section">
+            <label>Ton avis :</label>
+            <div class="stars" data-poem="2">
+              <span class="star" onclick="rate(2, 1)">★</span>
+              <span class="star" onclick="rate(2, 2)">★</span>
+              <span class="star" onclick="rate(2, 3)">★</span>
+              <span class="star" onclick="rate(2, 4)">★</span>
+              <span class="star" onclick="rate(2, 5)">★</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poème 3 : Le Livre -->
+        <div class="poeme-card" data-id="3" data-answer="livre">
+          <span class="poeme-number">3</span>
+          <h3>???</h3>
+          <p class="auteur">Par un élève anonyme</p>
+          <div class="poeme-texte">
+            Portail vers un autre monde, un autre univers,<br>
+            Il sombre, de plus en plus, dans l'oubli,<br>
+            Il est jeté, comme une pierre dans le fond d'une rivière,<br>
+            Maître et gardien du savoir, les lecteurs le vénèrent comme une déité,<br>
+            Les voyageurs des mondes sont ses adeptes, toujours fidèles,<br>
+            À l'affût de nouvelles aventures et découvertes,<br>
+            De mots et d'images sur ses pages, qui nourrissent de sagesses et d'aventures.
+          </div>
+          <div class="devinette-input">
+            <label>Devine l'objet :</label>
+            <input type="text" id="devinette3" placeholder="Ex: table, chaise..." autocomplete="off">
+            <button class="devinette-btn" onclick="checkAnswer(3, 'livre')">Vérifier</button>
+            <div class="devinette-result" id="result3"></div>
+          </div>
+          <div class="stars-section">
+            <label>Ton avis :</label>
+            <div class="stars" data-poem="3">
+              <span class="star" onclick="rate(3, 1)">★</span>
+              <span class="star" onclick="rate(3, 2)">★</span>
+              <span class="star" onclick="rate(3, 3)">★</span>
+              <span class="star" onclick="rate(3, 4)">★</span>
+              <span class="star" onclick="rate(3, 5)">★</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poème 4 : L'Alarme -->
+        <div class="poeme-card" data-id="4" data-answer="alarme">
+          <span class="poeme-number">4</span>
+          <h3>???</h3>
+          <p class="auteur">Par un élève anonyme</p>
+          <div class="poeme-texte">
+            Perchée en hauteur, tel un oiseau,<br>
+            Silencieuse, la plupart du temps,<br>
+            Pourtant, dès qu'un danger apparaît,<br>
+            Je me mets à hurler, sans arrêt.<br>
+            Mon bruit strident surprend, et fait réagir immédiatement.<br>
+            Muette, mais je préviens du risque, même si vous êtes aveugle,<br>
+            Grâce à moi, chacun comprend qu'il faut se mettre en sécurité.
+          </div>
+          <div class="devinette-input">
+            <label>Devine l'objet :</label>
+            <input type="text" id="devinette4" placeholder="Ex: table, chaise..." autocomplete="off">
+            <button class="devinette-btn" onclick="checkAnswer(4, 'alarme')">Vérifier</button>
+            <div class="devinette-result" id="result4"></div>
+          </div>
+          <div class="stars-section">
+            <label>Ton avis :</label>
+            <div class="stars" data-poem="4">
+              <span class="star" onclick="rate(4, 1)">★</span>
+              <span class="star" onclick="rate(4, 2)">★</span>
+              <span class="star" onclick="rate(4, 3)">★</span>
+              <span class="star" onclick="rate(4, 4)">★</span>
+              <span class="star" onclick="rate(4, 5)">★</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poème 5 : La Chaise -->
+        <div class="poeme-card" data-id="5" data-answer="chaise">
+          <span class="poeme-number">5</span>
+          <h3>???</h3>
+          <p class="auteur">Par un élève anonyme</p>
+          <div class="poeme-texte">
+            Sur ces quatre belles et petites jambes,<br>
+            Il sacrifie son dos, pour soulager autrui,<br>
+            Leur permettre de se reposer, ou de se rencontrer,<br>
+            Son usage est pourtant primaire, mais si altruiste,<br>
+            Devenant un ami proche, de tous ces utilisateurs.
+          </div>
+          <div class="devinette-input">
+            <label>Devine l'objet :</label>
+            <input type="text" id="devinette5" placeholder="Ex: table, chaise..." autocomplete="off">
+            <button class="devinette-btn" onclick="checkAnswer(5, 'chaise')">Vérifier</button>
+            <div class="devinette-result" id="result5"></div>
+          </div>
+          <div class="stars-section">
+            <label>Ton avis :</label>
+            <div class="stars" data-poem="5">
+              <span class="star" onclick="rate(5, 1)">★</span>
+              <span class="star" onclick="rate(5, 2)">★</span>
+              <span class="star" onclick="rate(5, 3)">★</span>
+              <span class="star" onclick="rate(5, 4)">★</span>
+              <span class="star" onclick="rate(5, 5)">★</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poème 6 : Le Papier toilette -->
+        <div class="poeme-card" data-id="6" data-answer="papier toilette">
+          <span class="poeme-number">6</span>
+          <h3>???</h3>
+          <p class="auteur">Par un élève anonyme</p>
+          <div class="poeme-texte">
+            Il attend, seul sur son bâton de bois, le moment critique où l'on perd son sang-froid,<br>
+            Petit rouleau blanc, témoin de nos drames, il absorbe nos peines et toutes nos flammes,<br>
+            Mais quand il s'éclipse, c'est la fin du monde, on maudit la terre chaque minute, chaque seconde,<br>
+            On finit en crabe, le pantalon en bas, à chercher un mouchoir qui n'existe pas.
+          </div>
+          <div class="devinette-input">
+            <label>Devine l'objet :</label>
+            <input type="text" id="devinette6" placeholder="Ex: table, chaise..." autocomplete="off">
+            <button class="devinette-btn" onclick="checkAnswer(6, 'papier toilette')">Vérifier</button>
+            <div class="devinette-result" id="result6"></div>
+          </div>
+          <div class="stars-section">
+            <label>Ton avis :</label>
+            <div class="stars" data-poem="6">
+              <span class="star" onclick="rate(6, 1)">★</span>
+              <span class="star" onclick="rate(6, 2)">★</span>
+              <span class="star" onclick="rate(6, 3)">★</span>
+              <span class="star" onclick="rate(6, 4)">★</span>
+              <span class="star" onclick="rate(6, 5)">★</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poème 7 : Le Livre (2ème) -->
+        <div class="poeme-card" data-id="7" data-answer="livre">
+          <span class="poeme-number">7</span>
+          <h3>???</h3>
+          <p class="auteur">Par un élève anonyme</p>
+          <div class="poeme-texte">
+            Il faut tourner la page,<br>
+            Toi qui raconte des histoires,<br>
+            Je ne pourrais jamais m'en passer,<br>
+            Tes histoires m'inspirent,<br>
+            Énamouré des mots, tu en es le roi.
+          </div>
+          <div class="devinette-input">
+            <label>Devine l'objet :</label>
+            <input type="text" id="devinette7" placeholder="Ex: table, chaise..." autocomplete="off">
+            <button class="devinette-btn" onclick="checkAnswer(7, 'livre')">Vérifier</button>
+            <div class="devinette-result" id="result7"></div>
+          </div>
+          <div class="stars-section">
+            <label>Ton avis :</label>
+            <div class="stars" data-poem="7">
+              <span class="star" onclick="rate(7, 1)">★</span>
+              <span class="star" onclick="rate(7, 2)">★</span>
+              <span class="star" onclick="rate(7, 3)">★</span>
+              <span class="star" onclick="rate(7, 4)">★</span>
+              <span class="star" onclick="rate(7, 5)">★</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poème 8 : Le Tableau -->
+        <div class="poeme-card" data-id="8" data-answer="tableau">
+          <span class="poeme-number">8</span>
+          <h3>???</h3>
+          <p class="auteur">Par un élève anonyme</p>
+          <div class="poeme-texte">
+            Je suis un espace blanc, sans avenir,<br>
+            Je suis aussi vide, que l'espace avant le big bang,<br>
+            On ne me voit que lorsqu'on oblige les autres à me regarder, ou lorsque<br>
+            l'on se projette sur moi,<br>
+            On écrit sur moi, comme sur la couverture d'un livre,<br>
+            Comme le ferait un poète, au cœur d'une soirée,<br>
+            Je ne sers qu'à expliquer, ou à être manipulé,<br>
+            On ne me regarde, comme un être insignifiant que l'on<br>
+            pourrait supprimer ou remplacer,<br>
+            Je suis la source du désespoir pour certains,<br>
+            Et le bonheur pour d'autres.
+          </div>
+          <div class="devinette-input">
+            <label>Devine l'objet :</label>
+            <input type="text" id="devinette8" placeholder="Ex: table, chaise..." autocomplete="off">
+            <button class="devinette-btn" onclick="checkAnswer(8, 'tableau')">Vérifier</button>
+            <div class="devinette-result" id="result8"></div>
+          </div>
+          <div class="stars-section">
+            <label>Ton avis :</label>
+            <div class="stars" data-poem="8">
+              <span class="star" onclick="rate(8, 1)">★</span>
+              <span class="star" onclick="rate(8, 2)">★</span>
+              <span class="star" onclick="rate(8, 3)">★</span>
+              <span class="star" onclick="rate(8, 4)">★</span>
+              <span class="star" onclick="rate(8, 5)">★</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poème 9 : Le Livre (3ème) -->
+        <div class="poeme-card" data-id="9" data-answer="livre">
+          <span class="poeme-number">9</span>
+          <h3>???</h3>
+          <p class="auteur">Par un élève anonyme</p>
+          <div class="poeme-texte">
+            Toi qui balaies mon ennui,<br>
+            Épris des mots, tu es source d'ataraxie,<br>
+            J'aimerais lire au plus profond de toi,<br>
+            Tu es mon centre d'intérêt,<br>
+            Toi qui apprends à celui qui sait écouter.
+          </div>
+          <div class="devinette-input">
+            <label>Devine l'objet :</label>
+            <input type="text" id="devinette9" placeholder="Ex: table, chaise..." autocomplete="off">
+            <button class="devinette-btn" onclick="checkAnswer(9, 'livre')">Vérifier</button>
+            <div class="devinette-result" id="result9"></div>
+          </div>
+          <div class="stars-section">
+            <label>Ton avis :</label>
+            <div class="stars" data-poem="9">
+              <span class="star" onclick="rate(9, 1)">★</span>
+              <span class="star" onclick="rate(9, 2)">★</span>
+              <span class="star" onclick="rate(9, 3)">★</span>
+              <span class="star" onclick="rate(9, 4)">★</span>
+              <span class="star" onclick="rate(9, 5)">★</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poème 10 : L'Extincteur -->
+        <div class="poeme-card" data-id="10" data-answer="extincteur">
+          <span class="poeme-number">10</span>
+          <h3>???</h3>
+          <p class="auteur">Par un élève anonyme</p>
+          <div class="poeme-texte">
+            Je veille, de jour comme de nuit,<br>
+            Silencieux gardien de couloir, j'attends mon heure,<br>
+            Sous ma poignée figée, je retiens une tempête blanche,<br>
+            Reposant debout, installé sur mon support,<br>
+            Prêt à jaillir, au moindre appel des flammes.
+          </div>
+          <div class="devinette-input">
+            <label>Devine l'objet :</label>
+            <input type="text" id="devinette10" placeholder="Ex: table, chaise..." autocomplete="off">
+            <button class="devinette-btn" onclick="checkAnswer(10, 'extincteur')">Vérifier</button>
+            <div class="devinette-result" id="result10"></div>
+          </div>
+          <div class="stars-section">
+            <label>Ton avis :</label>
+            <div class="stars" data-poem="10">
+              <span class="star" onclick="rate(10, 1)">★</span>
+              <span class="star" onclick="rate(10, 2)">★</span>
+              <span class="star" onclick="rate(10, 3)">★</span>
+              <span class="star" onclick="rate(10, 4)">★</span>
+              <span class="star" onclick="rate(10, 5)">★</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Poème 11 : La Sortie de secours -->
+        <div class="poeme-card" data-id="11" data-answer="sortie">
+          <span class="poeme-number">11</span>
+          <h3>???</h3>
+          <p class="auteur">Par un élève anonyme</p>
+          <div class="poeme-texte">
+            Comme un cadre accroché au mur, je veille sans aucun bruit,<br>
+            Dans l'ombre du silence, je garde ma lumière,<br>
+            Un phare dans l'obscurité, guidant mes pas avec légèreté,<br>
+            Une silhouette pressée de partir en urgence,<br>
+            Et ma couleur me dirige à la liberté.
+          </div>
+          <div class="devinette-input">
+            <label>Devine l'objet :</label>
+            <input type="text" id="devinette11" placeholder="Ex: table, chaise..." autocomplete="off">
+            <button class="devinette-btn" onclick="checkAnswer(11, 'sortie')">Vérifier</button>
+            <div class="devinette-result" id="result11"></div>
+          </div>
+          <div class="stars-section">
+            <label>Ton avis :</label>
+            <div class="stars" data-poem="11">
+              <span class="star" onclick="rate(11, 1)">★</span>
+              <span class="star" onclick="rate(11, 2)">★</span>
+              <span class="star" onclick="rate(11, 3)">★</span>
+              <span class="star" onclick="rate(11, 4)">★</span>
+              <span class="star" onclick="rate(11, 5)">★</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    
+    <button class="nav-arrow next" onclick="scrollCarousel(1)">›</button>
+  </div>
+
+  <div class="submit-section">
+    <button class="submit-btn" id="submitBtn" onclick="submitVotes()" disabled>
+      🎰 Lancer la roulette (tous les poèmes requis)
+    </button>
+    <p class="progress-indicator" id="progress">0 / 11 poèmes notés</p>
+    <div class="bonus-indicator" id="bonusIndicator">
+      🎯 Bonus activé ! Tes chances sont doublées !
+    </div>
+    <p class="warning-text" id="warningText">⚠️ Tu dois noter les 11 poèmes pour participer au tirage.</p>
+  </div>
+  
+  <footer>
+    <div class="footer-info">
+      <span class="school">Lycée Alfred Sauvy</span><br>
+      1 Carrer Alfred Sauvy, 66740 Villelongue-dels-Monts<br>
+      04 68 95 34 00<br>
+      Printemps des Poètes 2026
+    </div>
+  </footer>
+</div>
+
+<!-- ========== PAGE ROULETTE ========== -->
+<div id="roulettePage">
+  <div class="roulette-container">
+    <h2>🎰 Moment de vérité !</h2>
+    <p>Tu tentes ta chance à la roulette.</p>
+    
+    <div class="bonus-info" id="rouletteBonusInfo">
+      <strong>Aucun bonus activé</strong><br>
+      <small>Devine au moins 1 objet pour doubler tes chances !</small>
+    </div>
+    
+    <div class="roulette-wheel">
+      <div class="pointer"></div>
+      <div class="wheel" id="wheel">
+        <div class="wheel-center">🍀</div>
+      </div>
+    </div>
+    
+    <button class="roulette-btn" id="spinBtn" onclick="spinRoulette()">
+      Lancer la roulette !
+    </button>
+    
+    <div class="result-box" id="resultBox">
+      <h3 id="resultTitle"></h3>
+      <p id="resultText"></p>
+    </div>
+    
+    <button class="quit-btn" id="quitBtn" onclick="logout()">
+      ← Se déconnecter et quitter
+    </button>
+  </div>
+</div>
+
+<div class="overlay" id="overlay"></div>
+<div class="message" id="message"></div>
+
+<script>
+  // ==================== SÉCURITÉ ANTI-TRICHE (corrigée) ====================
+  
+  function generateSessionId() {
+    return 'sess_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+  }
+  
+  // Vérifie si l'utilisateur a DÉJÀ VOTÉ (pas au chargement)
+  function checkIfAlreadyVoted() {
+    const hasVoted = localStorage.getItem('poemes2026_hasVoted');
+    if (hasVoted === 'true') {
+      return true;
+    }
+    return false;
+  }
+  
+  // Marque comme ayant voté (appelé SEULEMENT après soumission)
+  function markAsVoted() {
+    localStorage.setItem('poemes2026_hasVoted', 'true');
+    localStorage.setItem('poemes2026_voteTime', Date.now().toString());
+  }
+  
+  function showAntiCheatWarning() {
+    document.getElementById('antiCheatWarning').classList.add('visible');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  // Pas de blocage au chargement !
+  // ==================== APPLICATION ====================
+  
+  let userData = { nom: '', prenom: '', role: '' };
+  let ratings = {};
+  let correctGuesses = 0;
+  const TOTAL_POEMS = 11;
+  const BASE_WIN_CHANCE = 1/20;
+  let currentWinChance = BASE_WIN_CHANCE;
+  let sessionId = generateSessionId();
+  
+  function enterVoting() {
+    // Vérifie seulement si déjà voté AVANT
+    if (checkIfAlreadyVoted()) {
+      showAntiCheatWarning();
+      return;
+    }
+    
+    const nom = document.getElementById('userNom').value.trim();
+    const prenom = document.getElementById('userPrenom').value.trim();
+    const role = document.getElementById('userRole').value;
+    
+    if (!nom || !prenom || !role) {
+      document.getElementById('errorMsg').style.display = 'block';
+      return;
+    }
+    
+    userData = { 
+      nom: nom.charAt(0).toUpperCase() + nom.slice(1).toLowerCase(),
+      prenom: prenom.charAt(0).toUpperCase() + prenom.slice(1).toLowerCase(),
+      role: role
+    };
+    
+    document.getElementById('userBadge').textContent = `${userData.prenom} ${userData.nom}`;
+    document.getElementById('welcomePage').style.display = 'none';
+    document.getElementById('votingPage').style.display = 'flex';
+  }
+  
+  function checkAnswer(poemId, correctAnswer) {
+    if (checkIfAlreadyVoted()) {
+      showAntiCheatWarning();
+      return;
+    }
+    
+    const input = document.getElementById(`devinette${poemId}`);
+    const resultDiv = document.getElementById(`result${poemId}`);
+    const userAnswer = input.value.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const card = input.closest('.poeme-card');
+    
+    const validAnswers = {
+      'porte': ['porte', 'la porte', 'sortie', 'issue', 'barriere', 'seuil', 'portail', 'entree', 'passage'],
+      'fleur': ['fleur', 'la fleur', 'pervenche', 'plante', 'rose', 'tulipe', 'marguerite', 'bouton', 'vegetal', 'nature'],
+      'livre': ['livre', 'le livre', 'bouquin', 'ouvrage', 'roman', 'recueil', 'lecture', 'pages', 'histoire', 'conte', 'album', 'manuel', 'cahier', 'texte', 'oeuvre', 'volume'],
+      'alarme': ['alarme', 'l alarme', 'alarme incendie', 'sirene', 'detecteur', 'avertisseur', 'signal', 'alerte', 'sonnerie', 'bip'],
+      'chaise': ['chaise', 'la chaise', 'siege', 'tabouret', 'fauteuil', 'banc', 'assise'],
+      'papier toilette': ['papier toilette', 'le papier toilette', 'papier wc', 'pq', 'rouleau', 'papier hygienique', 'papier de toilette'],
+      'tableau': ['tableau', 'le tableau', 'tableau blanc', 'ardoise', 'tableau noir', 'panneau', 'ecran'],
+      'extincteur': ['extincteur', 'l extincteur', 'poudre', 'extincteur a poudre', 'bouteille d incendie'],
+      'sortie': ['sortie', 'la sortie', 'sortie de secours', 'issue', 'issue de secours', 'porte de secours']
+    };
+    
+    const accepted = validAnswers[correctAnswer] || [correctAnswer];
+    
+    if (accepted.includes(userAnswer)) {
+      input.classList.add('correct');
+      input.classList.remove('wrong');
+      input.disabled = true;
+      resultDiv.textContent = '✓ Bonne réponse !';
+      resultDiv.className = 'devinette-result success';
+      
+      if (!card.classList.contains('guessed')) {
+        card.classList.add('guessed');
+        correctGuesses++;
+        updateDevinetteCounter();
+      }
+    } else {
+      input.classList.add('wrong');
+      resultDiv.textContent = '✗ Essaie encore...';
+      resultDiv.className = 'devinette-result error';
+      
+      setTimeout(() => {
+        input.classList.remove('wrong');
+        resultDiv.textContent = '';
+      }, 2000);
+    }
+  }
+  
+  function updateDevinetteCounter() {
+    const counter = document.getElementById('devinetteCounter');
+    counter.textContent = `${correctGuesses} / ${TOTAL_POEMS} devinettes correctes`;
+    
+    const bonusIndicator = document.getElementById('bonusIndicator');
+    if (correctGuesses >= 1) {
+      bonusIndicator.classList.add('visible');
+      currentWinChance = BASE_WIN_CHANCE * 2;
+    }
+    
+    updateRouletteBonusInfo();
+  }
+  
+  function updateRouletteBonusInfo() {
+    const info = document.getElementById('rouletteBonusInfo');
+    if (correctGuesses >= 1) {
+      info.innerHTML = `
+        <strong style="color: #4caf50;">🎯 Bonus activé ! Chances doublées : 1 sur 10</strong><br>
+        <small>(${correctGuesses} bonne${correctGuesses > 1 ? 's' : ''} réponse${correctGuesses > 1 ? 's' : ''})</small>
+      `;
+      info.classList.remove('no-bonus');
+    } else {
+      info.innerHTML = `
+        <strong>Aucun bonus activé</strong><br>
+        <small>Devine au moins 1 objet pour doubler tes chances !</small>
+      `;
+      info.classList.add('no-bonus');
+    }
+  }
+  
+  function rate(poemId, stars) {
+    if (checkIfAlreadyVoted()) {
+      showAntiCheatWarning();
+      return;
+    }
+    
+    ratings[poemId] = stars;
+    
+    const starsContainer = document.querySelector(`.stars[data-poem="${poemId}"]`);
+    const starElements = starsContainer.querySelectorAll('.star');
+    
+    starElements.forEach((star, index) => {
+      star.classList.remove('selected', 'active');
+      if (index < stars) {
+        star.classList.add('selected');
+      }
+    });
+    
+    updateProgress();
+  }
+  
+  function scrollCarousel(direction) {
+    const wrapper = document.getElementById('carouselWrapper');
+    const scrollAmount = wrapper.clientWidth * 0.9;
+    wrapper.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  }
+  
+  function updateProgress() {
+    const rated = Object.keys(ratings).length;
+    document.getElementById('progress').textContent = 
+      `${rated} / ${TOTAL_POEMS} poèmes notés`;
+    
+    const submitBtn = document.getElementById('submitBtn');
+    const warningText = document.getElementById('warningText');
+    
+    if (rated === TOTAL_POEMS) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = '🎰 Lancer la roulette !';
+      warningText.style.display = 'none';
+    } else {
+      submitBtn.disabled = true;
+      warningText.style.display = 'block';
+    }
+  }
+  
+  function submitVotes() {
+    if (checkIfAlreadyVoted()) {
+      showAntiCheatWarning();
+      return;
+    }
+    
+    const rated = Object.keys(ratings).length;
+    if (rated < TOTAL_POEMS) {
+      showMessage('error', `Note les ${TOTAL_POEMS} poèmes !`);
+      return;
+    }
+    
+    // Marque comme voté SEULEMENT ICI
+    markAsVoted();
+    
+    const voteData = {
+      user: userData,
+      ratings: ratings,
+      correctGuesses: correctGuesses,
+      bonusActivated: correctGuesses >= 1,
+      timestamp: Date.now()
+    };
+    
+    localStorage.setItem('poemes2026_voteData', JSON.stringify(voteData));
+    
+    updateRouletteBonusInfo();
+    
+    document.getElementById('votingPage').style.display = 'none';
+    document.getElementById('roulettePage').style.display = 'flex';
+  }
+  
+  function spinRoulette() {
+    const wheel = document.getElementById('wheel');
+    const btn = document.getElementById('spinBtn');
+    const resultBox = document.getElementById('resultBox');
+    const resultTitle = document.getElementById('resultTitle');
+    const resultText = document.getElementById('resultText');
+    const quitBtn = document.getElementById('quitBtn');
+    
+    btn.disabled = true;
+    btn.textContent = 'La roulette tourne...';
+    
+    wheel.classList.add('spinning');
+    
+    setTimeout(() => {
+      wheel.classList.remove('spinning');
+      
+      const seed = Date.now() + Math.random();
+      const isWinner = (seed % 1) < currentWinChance;
+      
+      resultBox.className = 'result-box ' + (isWinner ? 'winner' : 'loser');
+      
+      if (isWinner) {
+        resultTitle.textContent = '🏆 JACKPOT !';
+        resultText.innerHTML = `
+          <strong>Félicitations ${userData.prenom} !</strong><br>
+          Tu as gagné une récompense !<br>
+          <small>Présente-toi au CDI pour la récupérer.</small>
+        `;
+        createConfetti();
+      } else {
+        resultTitle.textContent = '🍀 Pas de chance...';
+        resultText.innerHTML = `
+          <strong>${userData.prenom}</strong>, tu n'as pas gagné cette fois.<br>
+          <small>Merci d'avoir participé et voté pour nos poètes !</small>
+        `;
+      }
+      
+      btn.style.display = 'none';
+      quitBtn.classList.add('visible');
+      
+    }, 3000);
+  }
+  
+  function createConfetti() {
+    const colors = ['#ff6b6b', '#ffd93d', '#6bcf7f', '#4d96ff', '#ffb347'];
+    for (let i = 0; i < 50; i++) {
+      const confetti = document.createElement('div');
+      confetti.style.position = 'fixed';
+      confetti.style.width = '10px';
+      confetti.style.height = '10px';
+      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.top = '-10px';
+      confetti.style.borderRadius = '50%';
+      confetti.style.zIndex = '9999';
+      confetti.style.animation = `fall ${2 + Math.random() * 2}s linear`;
+      document.body.appendChild(confetti);
+      
+      setTimeout(() => confetti.remove(), 4000);
+    }
+  }
+  
+  function logout() {
+    // On ne supprime pas localStorage pour que l'anti-triche reste actif
+    userData = { nom: '', prenom: '', role: '' };
+    ratings = {};
+    correctGuesses = 0;
+    currentWinChance = BASE_WIN_CHANCE;
+    
+    document.getElementById('userNom').value = '';
+    document.getElementById('userPrenom').value = '';
+    document.getElementById('userRole').value = '';
+    
+    for (let i = 1; i <= TOTAL_POEMS; i++) {
+      const input = document.getElementById(`devinette${i}`);
+      if (input) {
+        input.value = '';
+        input.disabled = false;
+        input.classList.remove('correct', 'wrong');
+        const resultDiv = document.getElementById(`result${i}`);
+        if (resultDiv) resultDiv.textContent = '';
+        const card = input.closest('.poeme-card');
+        if (card) card.classList.remove('guessed');
+      }
+    }
+    
+    document.querySelectorAll('.star').forEach(star => {
+      star.classList.remove('selected', 'active');
+    });
+    
+    document.getElementById('wheel').classList.remove('spinning');
+    document.getElementById('spinBtn').style.display = 'inline-block';
+    document.getElementById('spinBtn').disabled = false;
+    document.getElementById('spinBtn').textContent = 'Lancer la roulette !';
+    document.getElementById('resultBox').className = 'result-box';
+    document.getElementById('resultBox').style.display = 'none';
+    document.getElementById('quitBtn').classList.remove('visible');
+    document.getElementById('bonusIndicator').classList.remove('visible');
+    
+    document.getElementById('roulettePage').style.display = 'none';
+    document.getElementById('welcomePage').style.display = 'flex';
+    
+    updateProgress();
+    updateDevinetteCounter();
+  }
+  
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+  
+  function showMessage(type, text) {
+    const overlay = document.getElementById('overlay');
+    const message = document.getElementById('message');
+    message.className = 'message ' + type;
+    message.textContent = text;
+    overlay.style.display = 'block';
+    message.style.display = 'block';
+    setTimeout(() => {
+      overlay.style.display = 'none';
+      message.style.display = 'none';
+    }, 2500);
+  }
+  
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+  const slider = document.getElementById('carouselWrapper');
+  
+  if (slider) {
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+    
+    slider.addEventListener('mouseleave', () => isDown = false);
+    slider.addEventListener('mouseup', () => isDown = false);
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      slider.scrollLeft = scrollLeft - (x - startX) * 2;
+    });
+  }
+</script>
